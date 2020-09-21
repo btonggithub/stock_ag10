@@ -1,0 +1,23 @@
+{
+  "development": {
+    "dialect": "sqlite",
+    "storage": "./dev.sqlite3"
+  },
+  "staging": {
+    "username": "root",
+    "password": "Tel1234!",
+    "database": "cmpos",
+    "host": "localhost",
+    "dialect": "mysql",
+    "port": "1112"
+  },
+  "production": {
+    "username": "sa",
+    "password": "Tel1234!",
+    "database": "cmpos",
+    "host": "localhost",
+    "port": "1112",
+    "dialect": "mssql",
+    "operatorsAliases": 0
+  }
+}

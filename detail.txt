@@ -1,0 +1,43 @@
+
+>sequelize model:generate --name Products --attributes "name:sting, image:string, stock:integer, price:integer" --underscored true
+>sequelize db:migrate
+>sequelize db:seed:all
+>sequelize db:seed:undo:all
+=====================================
+# Microsoft SQL Server (MSSQL)
+>npm i tedious
+# ใช้ไม่ได้ ใน windows container
+>docker pull mcr.microsoft.com/mssql/server:2017-latest
+>docker run --name demo-mssql -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Tel1234!' -p 1112:1433 -d mcr.microsoft.com/mssql/server:2017-latest
+
+# ใช้นี้แทน
+>docker build -t 2019-latest-non-root https://aka.ms/mssql2019-non-root
+>docker run --name demo-mssql -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=Tel1234!" -p 1112:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+
+>sequelize model:generate --name Products --attributes "name:sting, image:string, stock:integer, price:integer" --underscorded true
+>sequelize db:migrate --env=production
+>sequelize db:seed:all --env=production
+>sequelize db:seed:undo:all --env=production
+==============================================
+# MYSQL
+--docker--
+>docker pull mysql:8.0
+>docker run --name demo-mysql -e  MYSQL_ROOT_PASSWORD=Tel1234! -p 1112:3306 -d mysql:8.0
+
+--node app--
+# connect mysql
+>npm i mysql2
+>sequelize db:migrate --env=staging
+>sequelize db:seed:all --env=staging
+>sequelize db:seed:undo:all --env=staging
+
+# run node env=staging
+# ใช้ไม่ได้ เลยเปลี่ยนไปใช้ การ set value is .env แทน
+>NODE_ENV=staging nodemon server.js
+==================
+
+=== Materail ===
+# popup
+https://sweetalert2.github.io/
+
+# manage interceptor
