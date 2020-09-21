@@ -1,3 +1,4 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -14,7 +15,8 @@ export class SideNavComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onClickNavClose() {
+  onClickNavClose(){
     this.navClose.emit();
   }
+
 }
