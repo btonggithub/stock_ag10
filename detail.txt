@@ -41,3 +41,6 @@
 https://sweetalert2.github.io/
 
 # manage interceptor
+
+==================
+
