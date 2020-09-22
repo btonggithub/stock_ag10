@@ -43,4 +43,23 @@ https://sweetalert2.github.io/
 # manage interceptor
 
 ==================
+-- deploy -- 
+fallwerback
 
+-- pm2 nodejs server --
+\npm i pm2 -g
+
+==================
+manage environment nodejs on windows ต้องติดตั้ง cross-env หรือถ้าไม่ติดตั้งก็ใช้ npx แทน
+>npx cross-env PORT=1112 NODE_ENV=production node server.js
+#หรือติดตั้งใน project นั้นๆ  เฉพาะ dev
+>npm i cross-env --save-dev
+>npx cross-env PORT=1112 NODE_ENV=production node server.js
+
+# แล้วให้ package.json ช่วยแทน
+  "scripts": {
+    "start": "node server.js",
+    "production":"cross-env PORT=1112 NODE_ENV=production node server.js"
+  },
+
+===== .env =====

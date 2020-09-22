@@ -47,3 +47,5 @@ Thumbs.db
 
 .env
 
+/no_sub_folder
+/sub_folder

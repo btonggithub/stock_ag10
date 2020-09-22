@@ -5,7 +5,7 @@ const app = express();
 require("dotenv").config();
 
 var corsOptions = {
-  origin: ["https://www.w3schools.com", "http://localhost:4200"],
+  origin: ["http://localhost:1111","http://localhost:8012","https://www.w3schools.com", "http://localhost:4200"],
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
 };
 
