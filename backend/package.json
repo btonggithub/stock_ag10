@@ -4,22 +4,23 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "dev": "nodemon -r dotnet/config server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "multer": "^1.4.2",
     "mysql2": "^2.2.2",
     "sequelize": "^6.3.5",
-    "sqlite3": "^5.0.0",
-    "tedious": "^9.2.1"
+    "sqlite3": "^5.0.0"
   },
   "devDependencies": {
-    "cross-env": "^7.0.2"
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0"
   }
 }
