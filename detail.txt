@@ -63,3 +63,12 @@ manage environment nodejs on windows ต้องติดตั้ง cross-env
   },
 
 ===== .env =====
+# with npm 
+npm install dotenv
+ 
+# or with Yarn 
+yarn add dotenv
+
+# แบบไม่ใช้ file .env แต่ใช้ command line
+# เรียกว่า ทำแบบ preloading
+>node -r dotenv/config server.js
