@@ -12,6 +12,10 @@
     "port": "1112"
   },
   "production": {
+    "dialect": "sqlite",
+    "storage": "./prod.sqlite3"
+  },
+  "production_pk": {
     "username": "sa",
     "password": "Tel1234!",
     "database": "cmpos",

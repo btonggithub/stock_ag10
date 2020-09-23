@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const app = express();
 
-require("dotenv").config();
+// require("dotenv").config();
 
 var corsOptions = {
   origin: ["http://localhost:1111","http://localhost:8012","https://www.w3schools.com", "http://localhost:4200"],
